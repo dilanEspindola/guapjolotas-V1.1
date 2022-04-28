@@ -1,0 +1,68 @@
+img {
+  width: 100px;
+  height: 100px;
+}
+
+span i.icon-cart {
+  font-size: 50px;
+  color: rgba(0, 0, 0, 0.4);
+}
+
+.icon-cart-active {
+  position: relative;
+}
+.icon-cart-active::before {
+  content: "";
+  position: absolute;
+  background: var(--primary);
+  left: 0;
+  bottom: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+/* .icon-cart-active::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  bottom: 0;
+  left: 0;
+  background: var(--primary);
+} */
+
+.home > h1 {
+  margin-top: 20px;
+  width: 80%;
+}
+
+.links {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+}
+
+.links .active {
+  font-size: 20px;
+  color: var(--primary);
+  text-decoration: none;
+  position: relative;
+  padding: 10px 0;
+}
+.links .active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: var(--primary);
+  width: 100%;
+  height: 3px;
+}
+
+.links .no-active {
+  font-size: 20px;
+  text-decoration: none;
+  color: rgba(0, 0, 0, 0.4);
+  padding: 10px 0;
+}

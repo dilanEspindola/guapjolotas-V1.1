@@ -1,0 +1,40 @@
+.header-carrito > p {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.nombre-en-cart {
+  font-size: 18px;
+  font-weight: 400;
+  text-transform: capitalize;
+}
+
+.no-productos {
+  text-align: center;
+  margin-top: 100px;
+}
+
+.contenido-total p {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.contenido-total span {
+  color: var(--primary);
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.btn-pagar {
+  margin-top: 150px;
+  background: var(--primary);
+  border: none;
+  padding: 20px;
+  font-size: 18px;
+  letter-spacing: 1px;
+  color: #fff;
+  font-weight: 500;
+  width: 100%;
+  border-radius: 30px;
+  text-transform: capitalize;
+}

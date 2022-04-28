@@ -1,0 +1,16 @@
+.logout-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.logout {
+  cursor: pointer;
+}
+
+.logout i {
+  font-size: 32px;
+}
+.logout i:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
