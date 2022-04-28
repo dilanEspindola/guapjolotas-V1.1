@@ -1,0 +1,19 @@
+.formulario-pago {
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.formulario-pago label {
+  font-size: 18px;
+}
+
+.formulario-pago label span {
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+.formulario-pago button {
+  width: 100%;
+}
