@@ -9,9 +9,14 @@ import {
 import "../styles/carrito/carrito.css";
 
 export const CarritoPage = () => {
-  const { carrito } = Carrito();
+  const { carrito, setCarrito } = Carrito();
   const [total, setTotal] = useState(0);
   const navigate = useNavigate();
+
+  const eliminarElemento = (element) => {
+    const deleteFromState = carrito.filter((p, index) => index !== element);
+    setCarrito(deleteFromState);
+  };
 
   useEffect(() => {
     if (carrito.length > 0) {
@@ -35,12 +40,20 @@ export const CarritoPage = () => {
       ) : (
         <div className="lista-productos">
           {carrito.map((product, index) => (
-            <div className="single-guajolota" key={index + 1}>
-              <img src={product.imagen} alt="" />
-              <div className="txt-precio-guajolota">
-                <h1 className="nombre nombre-en-cart">{product.nombre}</h1>
-                <p className="precio">$ {product.total} mxn</p>
+            <div className="single-guajolota product-content" key={index + 1}>
+              <div className="content-img-desc">
+                <img src={product.imagen} alt="" />
+                <div className="txt-precio-guajolota">
+                  <h1 className="nombre nombre-en-cart">{product.nombre}</h1>
+                  <p className="precio">$ {product.total} mxn</p>
+                </div>
               </div>
+              <span>
+                <i
+                  className="fa-solid fa-xmark delete"
+                  onClick={() => eliminarElemento(index)}
+                ></i>
+              </span>
             </div>
           ))}
         </div>

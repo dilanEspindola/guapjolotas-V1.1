@@ -38,3 +38,19 @@
   border-radius: 30px;
   text-transform: capitalize;
 }
+
+.product-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.content-img-desc {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.product-content .delete {
+  cursor: pointer;
+  font-size: 32px;
+}

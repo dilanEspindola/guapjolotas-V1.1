@@ -1,15 +1,12 @@
 import { useState } from "react";
-import { Link, parsePath } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useDataContext } from "../context/DataContext";
-import Loading from "../components/Loading";
 import { useNavegador } from "../hooks/useNavegador";
 
 import "../styles/buscador/buscador.css";
 
 export const Buscador = () => {
   const [search, setSearch] = useState("");
-  const [loading, setLoading] = useState(true);
-
   const { handleNavigateDynamicRoute } = useNavegador();
   const { datos } = useDataContext();
 
@@ -17,11 +14,15 @@ export const Buscador = () => {
     setSearch(target.value);
   };
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   const result = datos.filter((p) => p.nombre.includes(search.toLowerCase()));
 
   return (
     <div className="vista-buscador">
-      <form action="" onSubmit={(e) => e.preventDefault()}>
+      <form action="" onSubmit={handleSubmit}>
         <input
           type="search"
           placeholder="sabor de ..."
