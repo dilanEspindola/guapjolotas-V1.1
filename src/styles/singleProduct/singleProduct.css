@@ -138,8 +138,7 @@ span i.back {
 }
 
 .agregar-carrito {
-  max-width: 550px;
-  margin-left: 28.2%;
+  margin: 0 auto;
   position: fixed;
   bottom: 20px;
   left: 20px;
@@ -153,4 +152,12 @@ span i.back {
   border-radius: 30px;
   background: var(--primary);
   box-shadow: 0 0 20px 8px rgba(0, 0, 0, 0.2), 0 2px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+@media (min-width: 600px) {
+  .agregar-carrito {
+    width: 80%;
+    position: relative;
+    margin-right: 80px;
+  }
 }
