@@ -57,6 +57,11 @@ input.buscador {
   margin-top: 20px;
 }
 
+.resultado-buscador .nombre {
+  font-size: 22px;
+  font-weight: 400;
+}
+
 .no-resultados {
   margin-top: 200px;
   text-align: center;

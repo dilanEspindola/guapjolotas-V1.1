@@ -1,11 +1,11 @@
-.gualotas {
+.products {
   margin: 10px 0;
   padding: 0 20px;
   display: flex;
   flex-direction: column;
 }
 
-.single-guajolota {
+.single-product {
   border-radius: 20px;
   padding: 10px 20px;
   background: #fff;
@@ -15,20 +15,27 @@
   margin-bottom: 20px;
 }
 
-.single-guajolota .txt-precio-guajolota {
+.single-product .txt-precio-product {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.single-guajolota .txt-precio-guajolota h2.nombre {
+.single-product .txt-precio-product h2.nombre {
   font-weight: 500;
   text-transform: capitalize;
-  font-size: 24px;
+  font-size: 22px;
 }
 
-.single-guajolota .txt-precio-guajolota p.precio {
+.single-product .txt-precio-product p.precio,
+p.cantidad {
   color: var(--primary);
   font-weight: 500;
   font-size: 24px;
+}
+
+.single-product .txt-precio-product p.cantidad {
+  color: var(--primary);
+  font-weight: 400;
+  font-size: 20px;
 }

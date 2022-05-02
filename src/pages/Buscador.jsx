@@ -27,6 +27,7 @@ export const Buscador = () => {
           type="search"
           placeholder="sabor de ..."
           onChange={handleSearch}
+          autoFocus
         />
         <Link to="/" className="cancelar">
           cancelar
@@ -45,11 +46,11 @@ export const Buscador = () => {
           result.map((product) => (
             <div
               key={product._id}
-              className="single-guajolota"
+              className="single-product"
               onClick={() => handleNavigateDynamicRoute(product._id)}
             >
               <img src={product.imagen} alt="" />
-              <div className="txt-precio-guajolota">
+              <div className="txt-precio-product">
                 <h1 className="nombre">{product.nombre}</h1>
                 <p className="precio">{product.precio}</p>
               </div>

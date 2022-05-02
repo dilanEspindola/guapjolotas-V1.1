@@ -40,12 +40,13 @@ export const CarritoPage = () => {
       ) : (
         <div className="lista-productos">
           {carrito.map((product, index) => (
-            <div className="single-guajolota product-content" key={index + 1}>
+            <div className="single-product product-content" key={index + 1}>
               <div className="content-img-desc">
                 <img src={product.imagen} alt="" />
-                <div className="txt-precio-guajolota">
+                <div className="txt-precio-product">
                   <h1 className="nombre nombre-en-cart">{product.nombre}</h1>
                   <p className="precio">$ {product.total} mxn</p>
+                  <p className="cantidad">x{product.cantidad}</p>
                 </div>
               </div>
               <span>

@@ -41,7 +41,11 @@ export const ProductoId = () => {
 
       carrito.find((cart) =>
         cart.id === getProduct._id
-          ? { ...cart, total: (cart.total -= precioToNumber) }
+          ? {
+              ...cart,
+              total: (cart.total -= precioToNumber),
+              cantidad: (cart.cantidad -= 1),
+            }
           : null
       );
       setDisable(true);
@@ -63,6 +67,7 @@ export const ProductoId = () => {
         nombre: data.nombre,
         imagen: data.imagen,
         total: data.total,
+        cantidad: count,
       },
     ]);
   };
