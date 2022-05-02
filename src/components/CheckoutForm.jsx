@@ -8,6 +8,7 @@ import Loading from "./Loading";
 
 export const CheckoutForm = ({ precioTotal }) => {
   const [loading, setLoading] = useState(false);
+  const [getId, setGetId] = useState(null);
   const stripe = useStripe();
   const elements = useElements();
   const { carrito } = Carrito();
@@ -24,6 +25,7 @@ export const CheckoutForm = ({ precioTotal }) => {
 
     if (!error) {
       const { id } = paymentMethod;
+      setGetId(id);
 
       const { data } = await axios.post(
         "https://backend-appguajolotas.herokuapp.com/checkout",
@@ -55,7 +57,7 @@ export const CheckoutForm = ({ precioTotal }) => {
       </label>
       <CardElement />
       <button>Pagar</button>
-      {loading && (
+      {getId && loading && (
         <div
           style={{
             display: "flex",
